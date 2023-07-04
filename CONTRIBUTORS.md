@@ -49,6 +49,8 @@ https://paste.sr.ht/~grokloc/35bcd3dcc8175efce83aaa4deb88eec4406a394f
 - `make`
 - optional: local PostgreSQL client support
 
+### Commands
+
 `make docker`
 
 which builds the local image.

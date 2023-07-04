@@ -7,7 +7,7 @@ GrokLOC application server PostgreSQL support
 The goal of GrokLOC is to eventually provide a code comprehension platform founded upon
 structured representations of code-as-data.
 
-This repository is provides PostgreSQL support, including schemas and Docker automation.
+This repository provides PostgreSQL support, including schemas and Docker automation.
 
 # Links
 
