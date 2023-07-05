@@ -1,0 +1,8 @@
+version: 2
+jobs:
+  build:
+    machine: true
+    working_directory: ~/grokloc
+    steps:
+      - checkout
+      - run: make docker

@@ -1,0 +1,13 @@
+image: archlinux
+sources:
+  - git@git.sr.ht:~grokloc/grokloc-postgres
+tasks:
+  - update-pacman: |
+      sudo pacman -Sy
+  - install-pkgs: |
+      sudo pacman --noconfirm -S make docker
+  - docker: |
+      sudo systemctl start docker.service && sleep 5
+      sudo usermod -a -G docker $(id -u -n)
+  - build: |
+      cd /home/build/grokloc-postgres && make docker
