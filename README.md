@@ -1,7 +1,9 @@
 GrokLOC application server PostgreSQL support
 
 [![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
+![ci](https://github.com/grokloc/grokloc-postgres/workflows/Docker/badge.svg)
+[![builds.sr.ht status](https://builds.sr.ht/~grokloc/grokloc-postgres.svg)](https://builds.sr.ht/~grokloc/grokloc-postgres?)
+[![CircleCI](https://circleci.com/gh/grokloc/grokloc-postgres.svg?style=svg)](https://circleci.com/gh/grokloc/grokloc-postgres)
 # What is this?
 
 The goal of GrokLOC is to eventually provide a code comprehension platform founded upon
