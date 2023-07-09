@@ -35,6 +35,15 @@ This GitHub mirror may be temporarily lagging the SourceHut repository.
 
 See `CONTRIBUTORS.md` in this repository.
 
+# Image Versioning
+
+This repository manages a Docker image. The tag `dev` is applied to the most
+recent version, but there is also a fixed version tag pushed to Docker Hub that
+you can reference. See `VERSION` in `Makefile`. Periodically, similarly
+versioned images for other parts of GrokLOC may make reference to versions
+pushed from this repository by the GrokLOC team, so you should be mindful of
+these tags. Outdated tags may be removed from Docker Hub.
+
 # Status
 
 This repository is under active development but hasn't reached a useful state yet.
