@@ -1,7 +1,9 @@
-DOCKER       = docker
-IMG_DEV      = grokloc/grokloc-postgres:dev
-CONTAINER    = pg
-APP_URL      = postgres://grokloc:grokloc@localhost:5432/app
+DOCKER        = docker
+IMG_DEV       = grokloc/grokloc-postgres:dev
+VERSION       = 0.0.1
+IMG_VERSIONED = grokloc/grokloc-postgres:$(VERSION)
+CONTAINER     = pg
+APP_URL       = postgres://grokloc:grokloc@localhost:5432/app
 
 .PHONY: up
 up:
@@ -19,14 +21,17 @@ down:
 .PHONY: docker
 docker:
 	$(DOCKER) build . -f Dockerfile -t $(IMG_DEV)
+	$(DOCKER) tag $(IMG_DEV) $(IMG_VERSIONED)
 
 .PHONY: docker-push
 docker-push:
 	$(DOCKER) push $(IMG_DEV)
+	$(DOCKER) push $(IMG_VERSIONED)
 
 .PHONY: docker-pull
 docker-pull:
 	$(DOCKER) pull $(IMG_DEV)
+	$(DOCKER) pull $(IMG_VERSIONED)
 
 .PHONY: psql
 psql:
