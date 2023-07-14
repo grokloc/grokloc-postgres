@@ -5,7 +5,7 @@ tasks:
   - update-pacman: |
       sudo pacman -Sy
   - install-pkgs: |
-      sudo pacman --noconfirm -S make docker
+      sudo pacman --noconfirm -S make docker docker-buildx
   - docker: |
       sudo systemctl start docker.service && sleep 5
       sudo usermod -a -G docker $(id -u -n)
