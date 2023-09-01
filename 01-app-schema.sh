@@ -11,7 +11,6 @@ psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "app" <<-EOSQL
 	       email text not null,
 	       email_digest text not null,
 	       key_version text not null,
-	       nonce text not null,
 	       org text not null,
 	       password text not null,
 	       schema_version bigint not null default 0,
