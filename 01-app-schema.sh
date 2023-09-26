@@ -14,7 +14,7 @@ psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "app" <<-EOSQL
 
 	create table if not exists users (
 		-- our columns
-		api_secret uuid unique not null,
+		api_secret text not null,
 	  api_secret_digest text unique not null,
 	  display_name text not null,
 	  display_name_digest text not null,
